@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weatherly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">Weatherly</div>
+        <form id="searchForm" class="search-form">
+          <input
+            id="cityInput"
+            type="text"
+            value="New York"
+            aria-label="City name"
+            placeholder="Search city"
+          />
+          <button type="submit">Search</button>
+        </form>
+      </header>
+
+      <main class="weather-card">
+        <div class="weather-header">
+          <div>
+            <p class="eyebrow">Current weather</p>
+            <h1 id="location">Loading...</h1>
+          </div>
+          <span id="date" class="date-badge">--</span>
+        </div>
+
+        <div class="current-weather">
+          <div class="icon-wrapper">
+            <span id="weatherIcon" class="weather-icon">☀️</span>
+          </div>
+          <div class="temperature-block">
+            <div id="temperature" class="temperature">--°C</div>
+            <div id="condition" class="condition">--</div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <span>Feels like</span>
+            <strong id="feelsLike">--°C</strong>
+          </div>
+          <div class="stat-box">
+            <span>Humidity</span>
+            <strong id="humidity">--%</strong>
+          </div>
+          <div class="stat-box">
+            <span>Wind</span>
+            <strong id="wind">-- km/h</strong>
+          </div>
+          <div class="stat-box">
+            <span>Sunrise</span>
+            <strong id="sunrise">--:--</strong>
+          </div>
+        </div>
+
+        <section class="forecast-section">
+          <h2>5-day forecast</h2>
+          <div id="forecast" class="forecast-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <footer>Finished</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
